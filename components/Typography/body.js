@@ -1,22 +1,27 @@
 /** @format */
 import styled from 'styled-components';
 
-const BodyGilroy = styled.p`
-  font-family: gilroyLight;
+const switchfont = (font) => {
+  switch (font) {
+    case 'gilroy':
+      return 'gilroyLight';
+    case 'montserrat-medium':
+      return 'montserratMedium';
+    case 'montserrat':
+      return 'monserrat';
+  }
+};
+
+const Body = styled.p`
+  font-family: ${({ font }) => switchfont(font)};
   font-size: 1rem;
+  color: ${({ light }) => (light ? 'var(--text)' : '#000')};
   line-height: calc(24 / 16);
 `;
 
-const BodyMont = styled.p`
-  font-family: montserrat;
-  font-size: 1rem;
-  line-height: calc(24 / 16);
-`;
+Body.defaultProps = {
+  font: 'gilroy',
+  light: false,
+};
 
-const BodyMontMed = styled.p`
-  font-family: montserratMedium;
-  font-size: 1rem;
-  line-height: calc(24 / 16);
-`;
-
-export { BodyGilroy, BodyMont, BodyMontMed };
+export { Body };
