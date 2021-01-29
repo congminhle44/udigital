@@ -28,10 +28,11 @@ const Heading = styled.h1`
   font-family: gilroyBold;
   font-size: ${({ variant }) => switchFontSize(variant)};
   line-height: ${({ variant }) => switchLineHeight(variant)};
+  margin: 0;
 `;
 
 Heading.defaultProps = {
   variant: 'medium',
 };
 
-export { Heading };
+export default Heading;

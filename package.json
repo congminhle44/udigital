@@ -8,9 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.0.23",
     "next": "10.0.5",
+    "next-i18next": "^7.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-i18next": "^11.8.5",
     "styled-components": "^5.2.1"
   }
 }

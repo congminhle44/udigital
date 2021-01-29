@@ -15,8 +15,9 @@ const switchfont = (font) => {
 const Body = styled.p`
   font-family: ${({ font }) => switchfont(font)};
   font-size: 1rem;
-  color: ${({ light }) => (light ? 'var(--text)' : '#000')};
+  color: ${({ light }) => (light ? 'var(--text)' : '')};
   line-height: calc(24 / 16);
+  margin: 0;
 `;
 
 Body.defaultProps = {
@@ -24,4 +25,4 @@ Body.defaultProps = {
   light: false,
 };
 
-export { Body };
+export default Body;
