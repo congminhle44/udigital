@@ -9,7 +9,16 @@ html {
   --gray: #aaaaaa;
   --text: #616161;
   --black: #000000;
-  --blue: #f4f9ff;
+  --yellow: #f3c203;
+  --yellow-faded: #fffdf6;
+  --purple: #886cff;
+  --purple-faded: #f8f7fe;
+  --pink: #f55498;
+  --pink-faded: #fef6fa;
+  --orange: #ff3f00;
+  --orange-faded: #fff5f2;
+  --blue: #0081f5;
+  --blue-faded: #f2f9fe;
   --mint: #f8fdf9;
 }
 

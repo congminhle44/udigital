@@ -1,6 +1,6 @@
 /** @format */
 
-import Landing from './Landing';
+import Landing from '../fragments/Landing';
 
 export default function Home() {
   return (
