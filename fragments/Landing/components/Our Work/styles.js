@@ -35,6 +35,29 @@ export const WorkCard = styled.div`
   margin: 1.5rem auto;
 `;
 
+export const ImageLayer = styled.div`
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #000, transparent);
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+`;
+
+export const WorkImage = styled.div`
+  position: relative;
+  &:hover ${ImageLayer} {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
 export const WorkCardBody = styled.div`
   padding: 1.5rem;
 `;

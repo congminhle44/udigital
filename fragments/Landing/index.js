@@ -12,6 +12,8 @@ import Carousel from './components/Carousel';
 
 import Client from './components/Client';
 
+import Contact from './components/Contact';
+
 import OurWork from './components/Our Work';
 
 import Services from './components/Service';
@@ -37,6 +39,7 @@ export default function Landing() {
       <About />
       <OurWork />
       <Testominal />
+      <Contact />
       <Footer />
     </div>
   );
