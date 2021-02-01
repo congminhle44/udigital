@@ -11,9 +11,12 @@ import About from './components/About';
 import Carousel from './components/Carousel';
 
 import Client from './components/Client';
+
 import OurWork from './components/Our Work';
 
 import Services from './components/Service';
+
+import Testominal from './components/Testominal';
 
 const Banner = styled.div`
   background-image: url('/images/banner.png');
@@ -33,6 +36,7 @@ export default function Landing() {
       <Services />
       <About />
       <OurWork />
+      <Testominal />
       <Footer />
     </div>
   );
