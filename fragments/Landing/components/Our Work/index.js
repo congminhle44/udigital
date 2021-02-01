@@ -16,16 +16,24 @@ import {
   WorkCardWrapper,
   WorkHead,
   WorkWrapper,
+  WorkImage,
+  ImageLayer,
 } from './styles';
+import { Eye } from '../../../../components/Icons';
 
 export default function OurWork() {
   const renderWorkCard = () => {
     return works.map((work, index) => {
       return (
         <WorkCard key={index}>
-          <div>
+          <WorkImage>
             <img src={work.image} alt={work.title} />
-          </div>
+            <ImageLayer>
+              <Button variant='large'>
+                <Eye /> {'  '}See Photo
+              </Button>
+            </ImageLayer>
+          </WorkImage>
           <WorkCardBody>
             <Body light>{work.description}</Body>
             <Heading variant='small'>{work.title}</Heading>
