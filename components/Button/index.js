@@ -26,6 +26,10 @@ const Button = styled.button`
   &:active {
     filter: brightness(0.95);
   }
+  &:disabled {
+    cursor: no-drag;
+    opacity: 0.6;
+  }
 `;
 
 Button.defaultProps = {
