@@ -5,8 +5,14 @@ import styled from 'styled-components';
 import Footer from '../../components/Footer';
 
 import Header from '../../components/Header';
+
+import About from './components/About';
+
 import Carousel from './components/Carousel';
+
 import Client from './components/Client';
+import OurWork from './components/Our Work';
+
 import Services from './components/Service';
 
 const Banner = styled.div`
@@ -25,6 +31,8 @@ export default function Landing() {
         <Client />
       </Banner>
       <Services />
+      <About />
+      <OurWork />
       <Footer />
     </div>
   );

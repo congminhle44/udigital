@@ -7,7 +7,7 @@ export const ServiceWrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 3rem;
+  padding: 0 2rem;
   margin-top: 2rem;
   @media (min-width: 1280px) {
     margin-top: 10.3125rem;
@@ -46,6 +46,7 @@ export const ServiceCard = styled.div`
   position: relative;
   padding: 1.5rem;
   background-color: ${({ type }) => switchBg(type)};
+  margin: 0 auto;
   margin-bottom: 1rem;
   width: 100%;
   transition: all 0.3s ease;
@@ -69,6 +70,7 @@ export const ServiceCard = styled.div`
 
 export const ServiceLogo = styled.div`
   display: none;
+  box-shadow: 0.875rem 1.5rem 2.3125rem rgba(0, 0, 0, 0.2);
   @media (min-width: 1024px) {
     position: absolute;
     top: 20%;
