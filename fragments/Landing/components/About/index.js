@@ -1,5 +1,6 @@
 /** @format */
 
+import { FormattedMessage } from 'react-intl';
 import Body from '../../../../components/Typography/body';
 
 import Heading from '../../../../components/Typography/heading';
@@ -20,7 +21,9 @@ export default function About() {
           <img src='/images/teammate.png' alt='Team mate' />
         </AboutImgWrap>
         <AboutDetail>
-          <Heading>About Us</Heading>
+          <Heading>
+            <FormattedMessage id='abouttitle' />
+          </Heading>
           <AboutBody>
             <Body light>
               Uddoktagiri Digital is a Digital Agency focused on providing fully

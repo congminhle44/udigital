@@ -7,7 +7,10 @@ import Body from '../../components/Typography/body';
 import Button from '../../components/Button';
 
 import { BurgerNav } from '../Icons';
+
 import { useState } from 'react';
+
+import { FormattedMessage } from 'react-intl';
 
 /** @format */
 const HeaderWrap = styled.div`
@@ -90,15 +93,23 @@ export default function Header() {
         <img src='/images/Logo.png' alt='brand' />
       </div>
       <Nav>
-        <Body>Services</Body>
+        <Body>
+          <FormattedMessage id='nav1' />
+        </Body>
         <NavSecItem>
-          <Body>Work</Body>
+          <Body>
+            <FormattedMessage id='nav2' />
+          </Body>
         </NavSecItem>
-        <Body>About Us</Body>
+        <Body>
+          <FormattedMessage id='nav3' />
+        </Body>
       </Nav>
       <ButtonWrap>
         <Button rounded>
-          <Body font='montserrat-medium'>Get Started</Body>
+          <Body font='montserrat-medium'>
+            <FormattedMessage id='start' />
+          </Body>
         </Button>
       </ButtonWrap>
       <BurgerMenu onClick={() => setShow(!show)}>

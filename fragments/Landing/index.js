@@ -2,6 +2,8 @@
 
 import styled from 'styled-components';
 
+import Head from 'next/head';
+
 import Footer from '../../components/Footer';
 
 import Header from '../../components/Header';
@@ -20,6 +22,11 @@ import Services from './components/Service';
 
 import Testominal from './components/Testominal';
 
+import ChangeLanguage from '../../components/Language';
+
+import { TranslateProvider, LOCALES } from '../../public/locales';
+import { useState } from 'react';
+
 const Banner = styled.div`
   background-image: url('/images/banner.png');
   background-position: center;
@@ -28,8 +35,22 @@ const Banner = styled.div`
 `;
 
 export default function Landing() {
+  const [lang, setLang] = useState(LOCALES.ENGLISH);
+
+  const changeVietLang = () => {
+    setLang(LOCALES.VIETNAM);
+  };
+
+  const changeEnLang = () => {
+    setLang(LOCALES.ENGLISH);
+  };
+
   return (
-    <div>
+    <TranslateProvider locale={lang}>
+      <ChangeLanguage Vietlang={changeVietLang} EnLang={changeEnLang} />
+      <Head>
+        <title>Udigital</title>
+      </Head>
       <Banner>
         <Header />
         <Carousel />
@@ -41,6 +62,6 @@ export default function Landing() {
       <Testominal />
       <Contact />
       <Footer />
-    </div>
+    </TranslateProvider>
   );
 }

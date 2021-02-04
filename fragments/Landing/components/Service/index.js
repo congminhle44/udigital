@@ -1,4 +1,5 @@
 /** @format */
+import { FormattedMessage } from 'react-intl';
 import Body from '../../../../components/Typography/body';
 
 import Heading from '../../../../components/Typography/heading';
@@ -26,7 +27,9 @@ export default function Services() {
             <img src={service.logo} alt={service.head} />
           </ServiceLogo>
           <ServiceDescription>
-            <Heading variant='small'>{service.head}</Heading>
+            <Heading variant='small'>
+              <FormattedMessage id={service.type} />
+            </Heading>
             <ServiceBody>
               <Body light>{service.body}</Body>
             </ServiceBody>
@@ -40,7 +43,9 @@ export default function Services() {
     <ServiceWrapper>
       <ServiceContainer>
         <ServiceHead>
-          <Heading>Our Services</Heading>
+          <Heading>
+            <FormattedMessage id='servicetitle' />
+          </Heading>
           <BodyWrap>
             <Body light>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

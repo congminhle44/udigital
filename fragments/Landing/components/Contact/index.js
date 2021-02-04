@@ -11,6 +11,7 @@ import { useMutation } from 'react-query';
 import Form from './form';
 
 import axios from 'axios';
+import { FormattedMessage } from 'react-intl';
 
 export default function Contact() {
   const [info, setInfo] = useState();
@@ -35,7 +36,9 @@ export default function Contact() {
 
   return (
     <ContactWrapper>
-      <Heading>Work With US</Heading>
+      <Heading>
+        <FormattedMessage id='contacttitle' />
+      </Heading>
       <Form
         mutation={mutation}
         handleSubmit={handleSubmit}
