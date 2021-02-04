@@ -8,13 +8,15 @@ import Body from '../../../../components/Typography/body';
 
 import { IdeaWrap, Intro, IntroHead, SeeWork, Wrapper } from './styles';
 
+import { FormattedMessage } from 'react-intl';
+
 export default function Carousel() {
   return (
     <Wrapper>
       <Intro>
         <IntroHead>
           <Heading variant='large'>
-            Let's Grow Your Brand To The Next Level
+            <FormattedMessage id='slogan' />
           </Heading>
         </IntroHead>
         <Body light>
@@ -22,7 +24,9 @@ export default function Carousel() {
           nonumy eirmod tempor invidunt ut labore et dolore magna.
         </Body>
         <SeeWork>
-          <Button>See Out Work</Button>
+          <Button>
+            <FormattedMessage id='sloganbutton' />
+          </Button>
         </SeeWork>
       </Intro>
       <IdeaWrap>

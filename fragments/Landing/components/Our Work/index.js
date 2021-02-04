@@ -18,8 +18,10 @@ import {
   WorkWrapper,
   WorkImage,
   ImageLayer,
+  WorkImg,
 } from './styles';
 import { Eye } from '../../../../components/Icons';
+import { FormattedMessage } from 'react-intl';
 
 export default function OurWork() {
   const renderWorkCard = () => {
@@ -27,10 +29,10 @@ export default function OurWork() {
       return (
         <WorkCard key={index}>
           <WorkImage>
-            <img src={work.image} alt={work.title} />
+            <WorkImg src={work.image} alt={work.title} />
             <ImageLayer>
               <Button variant='large'>
-                <Eye /> {'  '}See Photo
+                <Eye /> {'  '} <FormattedMessage id='viewbtn' />
               </Button>
             </ImageLayer>
           </WorkImage>
@@ -46,7 +48,9 @@ export default function OurWork() {
   return (
     <WorkWrapper>
       <WorkHead>
-        <Heading>Our Work</Heading>
+        <Heading>
+          <FormattedMessage id='ourworktitle' />
+        </Heading>
         <WorkBody>
           <Body light>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -56,7 +60,9 @@ export default function OurWork() {
       </WorkHead>
       <WorkCardWrapper>{renderWorkCard()}</WorkCardWrapper>
       <WorkCardButton>
-        <Button>See More Work</Button>
+        <Button>
+          <FormattedMessage id='morebtn' />
+        </Button>
       </WorkCardButton>
     </WorkWrapper>
   );
