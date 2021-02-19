@@ -18,6 +18,8 @@ export default {
     media: 'Media Buying',
     app: 'Web and App Developement',
     abouttitle: 'About Us',
+    aboutcontent:
+      'Uddoktagiri Digital is a Digital Agency focused on providing fully Customised, Growth oriented and ROI (Return On Investment) based Digitalisation services. We are a team of professional digital marketing experts. We strive to transform your marketing experience taking it to a brand-new level. We are lucubrating here in Uddoktagiri Digital with all our heart and mind. We are into providing digital-marketing solutions and are committed to propel your business to the top of search rankings',
     ourworktitle: 'Our Work',
     viewbtn: 'See Photo',
     morebtn: 'View More Work',

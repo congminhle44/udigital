@@ -1,6 +1,9 @@
 /** @format */
 
 import { FormattedMessage } from 'react-intl';
+
+import Image from 'next/image';
+
 import Body from '../../../../components/Typography/body';
 
 import Heading from '../../../../components/Typography/heading';
@@ -18,7 +21,12 @@ export default function About() {
     <AboutWrapper>
       <AboutContainer>
         <AboutImgWrap>
-          <img src='/images/teammate.png' alt='Team mate' />
+          <Image
+            src='/images/teammate.png'
+            alt='Team mate'
+            width={600}
+            height={600}
+          />
         </AboutImgWrap>
         <AboutDetail>
           <Heading>
@@ -26,14 +34,7 @@ export default function About() {
           </Heading>
           <AboutBody>
             <Body light>
-              Uddoktagiri Digital is a Digital Agency focused on providing fully
-              Customised, Growth oriented and ROI (Return On Investment) based
-              Digitalisation services. We are a team of professional digital
-              marketing experts. We strive to transform your marketing
-              experience taking it to a brand-new level. We are lucubrating here
-              in Uddoktagiri Digital with all our heart and mind. We are into
-              providing digital-marketing solutions and are committed to propel
-              your business to the top of search rankings
+              <FormattedMessage id='aboutcontent' />
             </Body>
           </AboutBody>
         </AboutDetail>

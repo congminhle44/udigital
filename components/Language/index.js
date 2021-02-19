@@ -1,4 +1,5 @@
 /** @format */
+import Image from 'next/image';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -33,19 +34,14 @@ const ImageWrap = styled.div`
   }
 `;
 
-const Img = styled.img`
-  width: 100%;
-  height: 100%;
-`;
-
 export default function ChangeLanguage({ EnLang, Vietlang }) {
   return (
     <Wrapper>
       <ImageWrap onClick={() => EnLang()}>
-        <Img src='/images/en.png' alt='english' />
+        <Image src='/images/en.png' alt='english' width={35} height={25} />
       </ImageWrap>
       <ImageWrap onClick={() => Vietlang()}>
-        <Img src='/images/vi.png' alt='vietnam' />
+        <Image src='/images/vi.png' alt='vietnam' width={35} height={25} />
       </ImageWrap>
     </Wrapper>
   );

@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 export const ServiceWrapper = styled.div`
-  background-image: url('/images/services-bg.png');
+  background-image: url('/images/servicebg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

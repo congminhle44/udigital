@@ -1,10 +1,15 @@
 /** @format */
 import { FormattedMessage } from 'react-intl';
+
+import { useQuery } from 'react-query';
+
 import Body from '../../../../components/Typography/body';
 
 import Heading from '../../../../components/Typography/heading';
 
-import { services } from './data';
+import { api, services } from '../../../../config/api';
+
+import Image from 'next/image';
 
 import {
   ServiceCard,
@@ -18,25 +23,42 @@ import {
   ServicesWrap,
 } from './styles';
 
+const fetchServices = async () => {
+  const res = await api.get(services);
+
+  return res.data;
+};
+
 export default function Services() {
+  const { data } = useQuery('services', fetchServices);
+
   const renderServiceCard = () => {
-    return services.map((service, index) => {
-      return (
-        <ServiceCard type={service.type} key={index}>
-          <ServiceLogo type={service.type}>
-            <img src={service.logo} alt={service.head} />
-          </ServiceLogo>
-          <ServiceDescription>
-            <Heading variant='small'>
-              <FormattedMessage id={service.type} />
-            </Heading>
-            <ServiceBody>
-              <Body light>{service.body}</Body>
-            </ServiceBody>
-          </ServiceDescription>
-        </ServiceCard>
-      );
-    });
+    if (data) {
+      const baseUrl = 'http://localhost:1337';
+
+      return data.map((service, index) => {
+        return (
+          <ServiceCard type={service.type} key={index}>
+            <ServiceLogo type={service.type}>
+              <Image
+                src={`${baseUrl}${service.logo.url}`}
+                alt={service.type}
+                width={service.logo.width}
+                height={service.logo.height}
+              />
+            </ServiceLogo>
+            <ServiceDescription>
+              <Heading variant='small'>
+                <FormattedMessage id={service.type} />
+              </Heading>
+              <ServiceBody>
+                <Body light>{service.description}</Body>
+              </ServiceBody>
+            </ServiceDescription>
+          </ServiceCard>
+        );
+      });
+    }
   };
 
   return (

@@ -22,5 +22,8 @@
     "react-query": "^3.6.0",
     "styled-components": "^5.2.1",
     "swiper": "^6.4.10"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }

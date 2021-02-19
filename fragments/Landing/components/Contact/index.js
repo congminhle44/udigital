@@ -10,15 +10,15 @@ import { useMutation } from 'react-query';
 
 import Form from './form';
 
-import axios from 'axios';
 import { FormattedMessage } from 'react-intl';
+
+import { api, customers } from '../../../../config/api';
+import Image from 'next/image';
 
 export default function Contact() {
   const [info, setInfo] = useState();
 
-  const mutation = useMutation((newInfo) =>
-    axios.post('https://6017f21a971d850017a3f3df.mockapi.io/customers', newInfo)
-  );
+  const mutation = useMutation((newInfo) => api.post(customers, newInfo));
 
   useEffect(() => {
     if (mutation.isSuccess) alert('Thank you for your response');
@@ -45,10 +45,20 @@ export default function Contact() {
         handleTyping={handleTyping}
       />
       <TreeLeft>
-        <img src='/images/tree-left.png' alt='tree' />
+        <Image
+          src='/images/treeleft.jpg'
+          alt='tree left'
+          width={150}
+          height={250}
+        />
       </TreeLeft>
       <TreeRight>
-        <img src='/images/tree-right.png' alt='tree' />
+        <Image
+          src='/images/treeright.jpg'
+          alt='tree right'
+          width={150}
+          height={250}
+        />
       </TreeRight>
     </ContactWrapper>
   );

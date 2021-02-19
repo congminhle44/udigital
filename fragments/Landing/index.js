@@ -28,7 +28,7 @@ import { TranslateProvider, LOCALES } from '../../public/locales';
 import { useState } from 'react';
 
 const Banner = styled.div`
-  background-image: url('/images/banner.png');
+  background-image: url('/images/bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,6 +50,19 @@ export default function Landing() {
       <ChangeLanguage Vietlang={changeVietLang} EnLang={changeEnLang} />
       <Head>
         <title>Udigital</title>
+        <meta
+          name='description'
+          content='The clone implementation for udigital design'
+        />
+        <meta property='og:title' content='Udigital' />
+        <meta
+          property='og:description'
+          content='The clone implementation for udigital design'
+        />
+        <meta property='og:image' content='/images/thumbs.jpg' />
+        <meta property='og:type' content='service' />
+        <meta property='og:url' content='http://udigital.sestud.io' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <Banner>
         <Header />

@@ -1,5 +1,7 @@
 /** @format */
 
+import Image from 'next/image';
+
 import Button from '../../../../components/Button';
 
 import Heading from '../../../../components/Typography/heading';
@@ -30,7 +32,7 @@ export default function Carousel() {
         </SeeWork>
       </Intro>
       <IdeaWrap>
-        <img src='/images/idea.png' alt='Idea' />
+        <Image src='/images/idea.png' alt='Idea' width={500} height={400} />
       </IdeaWrap>
     </Wrapper>
   );

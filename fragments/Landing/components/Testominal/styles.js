@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 export const TestoWrapper = styled.div`
-  background-image: url('/images/testominal-bg.png');
+  background-image: url('/images/testominalbg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
