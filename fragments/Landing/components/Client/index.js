@@ -14,7 +14,7 @@ const fetchClients = async () => {
 };
 
 export default function Client() {
-  const { data, status } = useQuery('clients', fetchClients);
+  const { data } = useQuery('clients', fetchClients);
 
   const renderClientLogo = () => {
     if (data) {

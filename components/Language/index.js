@@ -38,10 +38,10 @@ export default function ChangeLanguage({ EnLang, Vietlang }) {
   return (
     <Wrapper>
       <ImageWrap onClick={() => EnLang()}>
-        <Image src='/images/en.png' alt='english' width={35} height={25} />
+        <Image src='/images/en.jpg' alt='english' width={32} height={17} />
       </ImageWrap>
       <ImageWrap onClick={() => Vietlang()}>
-        <Image src='/images/vi.png' alt='vietnam' width={35} height={25} />
+        <Image src='/images/vi.jpg' alt='vietnam' width={32} height={21} />
       </ImageWrap>
     </Wrapper>
   );
