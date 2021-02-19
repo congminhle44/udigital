@@ -11,6 +11,7 @@ import { BurgerNav } from '../Icons';
 import { useState } from 'react';
 
 import { FormattedMessage } from 'react-intl';
+import Image from 'next/image';
 
 /** @format */
 const HeaderWrap = styled.div`
@@ -90,7 +91,7 @@ export default function Header() {
   return (
     <HeaderWrap>
       <div>
-        <img src='/images/Logo.png' alt='brand' />
+        <Image width={120} height={40} src='/images/Logo.png' alt='brand' />
       </div>
       <Nav>
         <Body>

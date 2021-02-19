@@ -15,7 +15,7 @@ import Body from '../../../../components/Typography/body';
 
 import Heading from '../../../../components/Typography/heading';
 
-// import { testominal } from './data';
+import { api, quotes } from '../../../../config/api';
 
 import {
   QuoteAvatar,
@@ -29,9 +29,7 @@ import {
 } from './styles';
 
 const fetchQuotes = async () => {
-  const res = await axios.get(
-    'https://6017f21a971d850017a3f3df.mockapi.io/quotes'
-  );
+  const res = await api.get(quotes);
 
   return res.data;
 };

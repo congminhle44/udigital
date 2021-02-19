@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 export const AboutWrapper = styled.div`
-  background-image: url('/images/about-us-bg.png');
+  background-image: url('/images/aboutbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
