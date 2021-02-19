@@ -11,6 +11,7 @@ import { BurgerNav } from '../Icons';
 import { useState } from 'react';
 
 import { FormattedMessage } from 'react-intl';
+
 import Image from 'next/image';
 
 /** @format */

@@ -5,4 +5,7 @@ module.exports = {
   images: {
     domains: ['localhost', 'udigital-cms.sestud.io'],
   },
+  devIndicators: {
+    autoPrerender: false,
+  },
 };

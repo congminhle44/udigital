@@ -2,6 +2,10 @@
 
 import styled from 'styled-components';
 
+export const HideLabel = styled.div`
+  color: transparent;
+`;
+
 export const ContactWrapper = styled.div`
   position: relative;
   background-color: white;

@@ -32,7 +32,7 @@ export default function Carousel() {
         </SeeWork>
       </Intro>
       <IdeaWrap>
-        <Image src='/images/idea.png' alt='Idea' width={500} height={400} />
+        <Image src='/images/idea.png' alt='Idea' width={640} height={454} />
       </IdeaWrap>
     </Wrapper>
   );

@@ -63,6 +63,7 @@ export default function Landing() {
         <meta property='og:type' content='service' />
         <meta property='og:url' content='http://udigital.sestud.io' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <html lang={lang} />
       </Head>
       <Banner>
         <Header />
